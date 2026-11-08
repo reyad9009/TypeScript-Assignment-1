@@ -20,6 +20,6 @@ const processInput = (value) => {
 //* Problem 3
 const formatCoordinate = (coordinate) => {
     const [latitude, longitude, locationName] = coordinate;
-    return `Location: ${locationName} ${latitude} ${longitude}`;
+    return `Location: ${locationName} (${latitude} ${longitude})`;
 };
 export {};

@@ -6,7 +6,6 @@ const multiplyValue = (a: number, b?: number): number => {
   return a * b;
 };
 
-
 //* Problem 2:
 const processInput = (value: string | number | boolean): string | number => {
   if (typeof value === "string") {
@@ -18,9 +17,10 @@ const processInput = (value: string | number | boolean): string | number => {
   }
 };
 
-
 //* Problem 3
-const formatCoordinate =(coordinate: readonly[number, number, string])=>{
+const formatCoordinate = (
+  coordinate: readonly [number, number, string],
+): string => {
   const [latitude, longitude, locationName] = coordinate;
-  return `Location: ${locationName} ${latitude} ${longitude}`
-}
+  return `Location: ${locationName} (${latitude} ${longitude})`;
+};
