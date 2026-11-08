@@ -1,14 +1,15 @@
-const getPopularCourses = (courses, minStudents) => {
-    return courses.filter((courses) => {
-        return courses.isPublished === true && courses.students >= minStudents;
-    });
+const pluckValues = (items, key) => {
+    return items.map((item) => item[key]);
 };
-// Sample Input
-const courses = [
-    { title: "TypeScript Mastery", students: 120, isPublished: true },
-    { title: "Draft Course", students: 200, isPublished: false },
-    { title: "Basic HTML", students: 45, isPublished: true },
-    { title: "Next.js Pro", students: 85, isPublished: true }
+// Sample Input:
+const users = [
+    { id: 1, name: "Rakib", role: "Admin" },
+    { id: 2, name: "Sadia", role: "Editor" },
+    { id: 3, name: "Tariq", role: "Subscriber" },
 ];
-console.log(getPopularCourses(courses, 80));
+console.log(pluckValues(users, "name"));
+console.log(pluckValues(users, "id"));
 export {};
+// // Sample Output:
+// ["Rakib", "Sadia", "Tariq"]
+// [1, 2, 3]
