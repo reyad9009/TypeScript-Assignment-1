@@ -22,4 +22,13 @@ const formatCoordinate = (coordinate) => {
     const [latitude, longitude, locationName] = coordinate;
     return `Location: ${locationName} (${latitude} ${longitude})`;
 };
+//* Problem 4
+const concatenateArrays = (...array) => {
+    return array.flat();
+};
+const getPopularCourses = (courses, minStudents) => {
+    return courses.filter((courses) => {
+        return courses.isPublished === true && courses.students >= minStudents;
+    });
+};
 export {};
