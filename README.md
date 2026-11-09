@@ -1,4 +1,4 @@
-# TypeScript Assignment - B8A1
+# TypeScript & OOP Problem Solving
 
 ## Assignment Overview
 
