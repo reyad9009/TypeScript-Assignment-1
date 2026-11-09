@@ -7,5 +7,3 @@
 !/union-intersection-types.md
 !/README.md
 
-# Keep .gitignore itself
-!/.gitignore
