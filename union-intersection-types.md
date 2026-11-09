@@ -2,7 +2,7 @@
 
 ## Introduction
 
-While learning TypeScript, I learned that Union (`|`) and Intersection (`&`) types are useful for working with multiple types. They help us write flexible and reusable code. Although they look similar, they work differently. A Union allows a value to have one of several types, whereas an Intersection combines multiple types into one.
+While learning TypeScript, I learned that Union (`|`) and Intersection (`&`) types are useful for working with multiple types. They help us write flexible and reusable code. Although they look similar, they work differently.
 
 ## Detailed Explanation
 
@@ -44,27 +44,7 @@ const staff: Staff = {
 
 Here, `Staff` contains all the properties from both `Person` and `Employee`.
 
-We can also combine Union and Intersection types in a practical example.
-
-```ts
-type Admin = {
-  role: "admin";
-};
-
-type Customer = {
-  role: "customer";
-};
-
-type User = {
-  name: string;
-  email: string;
-};
-
-type Account = User & (Admin | Customer);
-```
-
-In this example, an account must contain the properties of `User` and can have either an admin or customer role.
 
 ## Conclusion
 
-In my understanding, Union and Intersection types make TypeScript more flexible and powerful. I use Union when a value can have different possible types and Intersection when I need to combine multiple structures. Using them together helps create reusable and well-organized code.
+In my understanding, Union and Intersection types make TypeScript more flexible and powerful. I use Union when a value can have different possible types and Intersection when I need to combine multiple structures.

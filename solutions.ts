@@ -1,12 +1,13 @@
-//* Problem 1:
-const multiplyValue = (a: number, b?: number): number => {
-  if (b === undefined) {
-    return a * 2;
+
+const multiplyValue = (value: number, multiplier?: number): number => {
+  if (multiplier === undefined) {
+    return value * 2;
   }
-  return a * b;
+  return value * multiplier;
 };
 
-//* Problem 2:
+
+
 const processInput = (value: string | number | boolean): string | number => {
   if (typeof value === "string") {
     return value.trim().toLowerCase();
@@ -18,38 +19,41 @@ const processInput = (value: string | number | boolean): string | number => {
 };
 
 
-//* Problem 3
-const formatCoordinate = (coordinate: readonly [number, number, string]) => {
+
+const formatCoordinate = (coordinate: readonly [number, number, string]):string => {
   const [latitude, longitude, locationName] = coordinate;
   return `Location: ${locationName} (${latitude}, ${longitude})`;
 };
 
-//* Problem 4
-const concatenateArrays = <T>(...array: T[][]): T[] => {
-  return array.flat();
+
+
+const concatenateArrays = <T> (...arrays: T[][]) : T[] => {
+  return arrays.flat();
 };
 
-//* Problem 5
+
+
 interface Course {
   title: string;
   students: number;
   isPublished: boolean;
 }
-const getPopularCourses = (
-  courses: Course[],
-  minStudents: number,
-): Course[] => {
-  return courses.filter((courses) => {
-    return courses.isPublished === true && courses.students >= minStudents;
+const getPopularCourses = (courses: Course[], minStudents: number): Course[] => {
+  const popularCourses = courses.filter((course) => {
+    return course.isPublished === true && course.students >= minStudents;
   });
+
+  return popularCourses;
 };
 
-//* Problem 6
+
+
 const pluckValues = <T, K extends keyof T>(items: T[], key: K): T[K][] => {
   return items.map((item) => item[key]);
 };
 
-//*Problem 7
+
+
 class Employee {
   constructor(
     protected name: string,
@@ -74,15 +78,36 @@ class Manager extends Employee {
   }
 }
 
-//*Problem 8
+
+
 const validateAgeAsync = (age: number): Promise<string> => {
   return new Promise((resolve, reject) => {
     if (age >= 18) {
       setTimeout(() => {
         resolve("Access Granted");
       }, 1000);
-    } else {
+    } 
+    else {
       reject(new Error("Access Denied: Must be 18 or older"));
     }
   });
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

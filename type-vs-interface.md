@@ -2,7 +2,7 @@
 
 ## Introduction
 
-While learning TypeScript, I found that both `type` and `interface` are used to define the structure of data. At first, they seemed almost the same to me. However, they have some important differences. Understanding these differences helps me write cleaner and more organized code.
+While learning TypeScript, I found that both `type` and `interface` are used to define the structure of data. At first, they seemed almost the same to me. However, they have some important differences.
 
 ## Detailed Explanation
 
@@ -33,7 +33,7 @@ type User = {
 type Status = "active" | "inactive";
 ```
 
-One important difference is that interfaces support declaration merging. It means we can declare the same interface more than once, and TypeScript combines their properties.
+One important difference- We can declare the same interface more than once, and TypeScript combines their properties.
 
 ```ts
 interface Person {
