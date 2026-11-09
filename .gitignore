@@ -1,2 +1,11 @@
-dist/
-node_modules/
+# Ignore everything
+/*
+
+# Allow these specific files
+!/solutions.ts
+!/type-vs-interface.md
+!/union-intersection-types.md
+!/README.md
+
+# Keep .gitignore itself
+!/.gitignore
