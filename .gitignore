@@ -1,3 +1,2 @@
-/dist/
-/tscofig.json/
-/index.html/
+dist/
+node_modules/

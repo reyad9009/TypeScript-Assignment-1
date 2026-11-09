@@ -9,7 +9,7 @@ const multiplyValue = (a: number, b?: number): number => {
 //* Problem 2:
 const processInput = (value: string | number | boolean): string | number => {
   if (typeof value === "string") {
-    return value.trim().toLocaleLowerCase();
+    return value.trim().toLowerCase();
   } else if (typeof value === "number") {
     return value * 10;
   } else {
@@ -17,12 +17,11 @@ const processInput = (value: string | number | boolean): string | number => {
   }
 };
 
+
 //* Problem 3
-const formatCoordinate = (
-  coordinate: readonly [number, number, string],
-): string => {
+const formatCoordinate = (coordinate: readonly [number, number, string]) => {
   const [latitude, longitude, locationName] = coordinate;
-  return `Location: ${locationName} (${latitude} ${longitude})`;
+  return `Location: ${locationName} (${latitude}, ${longitude})`;
 };
 
 //* Problem 4
@@ -41,7 +40,7 @@ const getPopularCourses = (
   minStudents: number,
 ): Course[] => {
   return courses.filter((courses) => {
-   return courses.isPublished === true && courses.students >= minStudents;
+    return courses.isPublished === true && courses.students >= minStudents;
   });
 };
 
@@ -49,7 +48,6 @@ const getPopularCourses = (
 const pluckValues = <T, K extends keyof T>(items: T[], key: K): T[K][] => {
   return items.map((item) => item[key]);
 };
-
 
 //*Problem 7
 class Employee {
@@ -75,8 +73,6 @@ class Manager extends Employee {
     return `Manager of ${this.department}: ${this.name}`;
   }
 }
-
-
 
 //*Problem 8
 const validateAgeAsync = (age: number): Promise<string> => {
